@@ -11,14 +11,14 @@ describe("Action to select option from the dropdown list", () => {
     cy.get("#selectProductSort").select(4);
   });
 
-  //Select one by one
-  it.only("Selection one by one", () => {
+  // Display one by one
+  it.only("Display one by one", () => {
     cy.visit("/");
     cy.contains(".sf-with-ul", "Women").click();
-    cy.get("#selectProductSort").then((select) => {
-      cy.wrap(select)
+    cy.get("#selectProductSort").then((selectOptions) => {
+      cy.wrap(selectOptions)
         .find("option")
-        .each((opcja) => cy.wrap(select).select(opcja.text));
+        .each((option) => cy.wrap(selectOptions).log(option.text()));
     });
   });
 });
