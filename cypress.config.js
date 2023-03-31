@@ -3,6 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     baseUrl: "http://automationpractice.pl/",
+    projectId: "et2dvv",
     includeShadowDom: true,
     chromeWebSecurity: true,
     viewportHeight: 1080,
