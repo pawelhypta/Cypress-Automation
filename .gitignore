@@ -1,6 +1,5 @@
 # Ignore Mac system files
 .DS_store
-portal.cy.js
 
 # Ignore node_modules folder
 node_modules
